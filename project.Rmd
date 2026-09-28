@@ -7,7 +7,7 @@ date: "2026-09-24"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-##PCA Rank Approximation Function
+## PCA Rank Approximation Function
 
 
 **Below is the rank approximation function I created for the provided images.**
