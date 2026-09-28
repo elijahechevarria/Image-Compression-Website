@@ -66,9 +66,11 @@ img_iterations(img1)
 
   
 ```
+
 **For the first image, I think that the closes approximation is probably from the k = 7 iteration, as it is the lowest k values to begin to most resemble the original image.**
 
 **Below is the plot of the first eigenvector, followed by a plot of the first PC score **
+
 ```{r, echo = FALSE}
 eigen_plot <- function(ex_image){
 pca <- prcomp(data.matrix(ex_image), center = TRUE, scale. = FALSE)
@@ -83,11 +85,11 @@ plot(scores[,1], type = "b", xlab = "Index", ylab = "PC1 score",
 
 eigen_plot(img1)
 ```
-##Interpretation of PC1 scores and Eigenvector plots
+**Interpretation of PC1 scores and Eigenvector plots**
 
 **For the PC1 score plot, each number represents how far a feature projects in the new direction. In terms of the Eigenvectors plot, each index is how much a particular variable contributes to the principal component itself.**
 
-##Image 2
+## Image 2
 
 **Here are the rank approximations for the second image, as well as the plot of error terms and k values.**
 ```{r, echo = FALSE}
@@ -98,6 +100,7 @@ img_iterations(img2)
 **For this image, all the approximations seem to be close. We could even choose something as small as k = 3, which does not look different at all from the original image plot.**
 
 **Below is the plot of the first eigenvector, followed by a plot of the first PC score.**
+
 ```{r, echo=FALSE}
 eigen_plot(img2)
 
@@ -105,9 +108,10 @@ eigen_plot(img2)
 
 **Similar to the first image, the PC scores furthest away from zero are the features that are most compatible with the new "pattern" the PCA algorithm determined. For eigenvectors, the scores determine how much a feature contributes to the principal component itself.**
 
-##Image 3
+## Image 3
 
 **Here are the rank approximations for the third image, as well as the plot of error terms and k values.**
+
 ```{r, echo=FALSE}
 img3 <- read_csv("image3.csv")
 img_iterations(img3)
@@ -123,7 +127,7 @@ eigen_plot(img2)
 
 **The eigenvector plots seem to almost mimic the original image, just in the opposite direction. As the index increases,the features contribute more. For the PC1 scores, each index represents a feature and how far it extends in the new direction.**
 
-##Image 4
+## Image 4
 
 **Here are the rank approximations for the third image, as well as the plot of error terms and k values.**
 
