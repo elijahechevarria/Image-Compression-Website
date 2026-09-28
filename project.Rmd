@@ -7,8 +7,12 @@ date: "2026-09-24"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+##PCA Rank Approximation Function
 
-```{r, echo=FALSE}
+
+**Below is the rank approximation function I created for the provided images.**
+
+```{r}
 library(readr)
 img1 <- read_csv("image1.csv")
 img1 <- data.matrix(img1)
@@ -31,10 +35,8 @@ rank_k_pca_approx <- function(img, k) {
   list(approximation = approx, error = error)
 }
 
-result <- rank_k_pca_approx(img1, k = 10)
-dim(result$approximation) 
-image(result$approximation, col = gray.colors(256))
-plot(result$approximation)
+##result <- rank_k_pca_approx(img1, k = 10)
+##plot(result$approximation)
 
 ```
 
